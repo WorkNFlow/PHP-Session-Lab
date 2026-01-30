@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <form id="myForm" class="flex flex-col gap-2 border-4 border-green-400 rounded-xl p-4">
+      <h1 class="text-black text-2xl text-center mb-4">Бронирование билетов</h1>
+      <div class="flex gap-2">
+        <label for="name" class="">Имя:</label>
+        <input type="text" name="name" placeholder="Иван Иванов" class="rounded-xl px-2"/>
+      </div>
+
+      <div class="flex gap-2">
+        <label for="quantity">Количество билетов:</label>
+        <input type="number" name="quantity" placeholder="1" min="1" max="100" class="rounded-xl px-2"/>
+      </div>
+
+      <div class="flex gap-2">
+      <label for="film_name">Фильм:</label>
+      <select name="film_name" class="rounded-xl px-2">
+        <option value="Avatar3">Аватар 3</option>
+        <option value="Formula1">Формула 1</option>
+        <option value="Zootopia2">Зверополис 2</option>
+      </select>
+      </div>
+
+      <div class="flex gap-2 items-center">
+        <label for="3D">3D очки</label>
+        <input type="checkbox" name="3D" class="rounded-xl px-2"/>
+      </div>
+      <div class="flex gap-4">
+        <label for="seat-type">Тип места:</label>
+        <div class="flex items-center gap-1">
+          <input type="radio" name="seat-type" value="standard" checked />
+          <label for="standard">Стандарт</label>
+        </div>
+        <div class="flex items-center gap-1">
+          <input type="radio" name="seat-type" value="vip" />
+          <label for="vip">VIP</label>
+        </div>
+      </div>
+
+      <div class="flex gap-2">
+        <label for="date">Дата сеанса:</label>
+        <input type="date" name="date" class="rounded-xl px-2"/>
+      </div>
+      <button class="p-2 rounded-xl border-2 border-green-600 bg-green-500 hover:bg-green-600 hover:text-white" type="submit">Купить</button>
+    </form>
+  </body>
+</html>
