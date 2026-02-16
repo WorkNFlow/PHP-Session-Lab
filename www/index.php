@@ -4,7 +4,7 @@
     <p>Данные из сессии:</p>
     <ul>
         <li>Имя: <?= $_SESSION['name'] ?></li>
-        <li>Фильм: <?= $_SESSION['film_name'] ?></li>
+        <li>Email: <?= $_SESSION['email'] ?></li>
     </ul>
 <?php else: ?>
     <p>Данных пока нет.</p>
@@ -12,3 +12,13 @@
 
 <a href="index.html">Заполнить форму</a> |
 <a href="view.php">Посмотреть все данные</a>
+
+<?php if(isset($_SESSION['errors'])): ?>
+    <ul style="color:red;">
+        <?php foreach($_SESSION['errors'] as $error): ?>
+            <li><?= $error ?></li>
+        <?php endforeach; ?>
+    </ul>
+    <?php unset($_SESSION['errors']); ?>
+<?php endif; ?>
+

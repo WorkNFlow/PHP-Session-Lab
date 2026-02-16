@@ -1,2 +1,2 @@
-Иван Иванов;Avatar3
-Петя Петров;Formula1
+Иван Иванов;ivan@ivanov.com
+Петя Петров;petya@petrov.com
