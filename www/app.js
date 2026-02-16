@@ -1,5 +1,4 @@
 document.getElementById("myForm").addEventListener("submit", function (e) {
-  e.preventDefault();
 
   const name = this.name.value;
   const film = this.film_name.value;
